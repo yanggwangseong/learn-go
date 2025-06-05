@@ -1,0 +1,14 @@
+{
+  "folders": [
+	{
+		"path": "../go-study-backend"
+	},
+	{
+		"path": "../gemini-go"
+	},
+	{
+		"path": "."
+	}
+],
+  "settings": {}
+}

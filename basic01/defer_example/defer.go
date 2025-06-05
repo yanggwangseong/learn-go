@@ -27,13 +27,31 @@ func main() {
 	*/
 
 	//fmt.Println("done")
-	stackingDefer()
+	//stackingDefer()
+
+	//fmt.Println(example())
+	fmt.Println(c())
 }
 
-func stackingDefer() {
-	fmt.Println("counting")
-	for i := range 10 {
-		defer fmt.Println(i)
-	}
-	fmt.Println("done")
+// func stackingDefer() {
+// 	fmt.Println("counting")
+// 	for i := range 10 {
+// 		defer fmt.Println(i)
+// 	}
+// 	fmt.Println("done")
+// }
+/*
+* defer named return
+*/
+// func example() (result int) {
+//     defer func() {
+//         result = 42 // named return
+//     }()
+//     return 0
+// }
+// 출력 : 42
+func c() (i int) {
+    defer func() { i++ }()
+    return 1
 }
+// 출력 : 2
